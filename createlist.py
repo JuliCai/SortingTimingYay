@@ -1,6 +1,5 @@
 import math
 import random
-from random import shuffle
 
 def sorted(length):
     return list(range(length))
