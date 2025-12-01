@@ -7,8 +7,8 @@ def sorted(length):
 def mostlysorted(length):
     templist = sorted(length)
     for i in range(math.ceil(length/10)):
-        indexa = random.randint(0,length)
-        indexb = random.randint(0,length)
+        indexa = random.randint(0,length-1)
+        indexb = random.randint(0,length-1)
         templist[indexa],templist[indexb]=templist[indexb],templist[indexa]
     return templist
 
