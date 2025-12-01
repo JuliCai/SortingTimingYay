@@ -34,6 +34,8 @@ def plot_sorting_algorithms(max_length, step):
         plt.ylabel('Time (s)')
         plt.legend()
         plt.grid(True)
-    
+        plt.savefig(f'{alg_name}_plot.png')
+        
     plt.show()
+    
 plot_sorting_algorithms(1000, 10)
