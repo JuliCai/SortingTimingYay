@@ -17,9 +17,9 @@ def plot_sorting_algorithms(max_length, step):
         'Quick Sort': sorting.quick
     }
     
-    for alg_name, alg_func in sorting_algorithms.items():
+    for list_name, list_func in list_types.items():
         plt.figure()
-        for list_name, list_func in list_types.items():
+        for alg_name, alg_func in sorting_algorithms.items():
             lengths = []
             times = []
             for length in range(0, max_length + 1, step):
@@ -27,14 +27,14 @@ def plot_sorting_algorithms(max_length, step):
                 t, _ = alg_func(test_list)
                 lengths.append(length)
                 times.append(t)
-            plt.plot(lengths, times, label=list_name)
+            plt.plot(lengths, times, label=alg_name)
 
-        plt.title(f'{alg_name}')
+        plt.title(f'{list_name}')
         plt.xlabel('List Length')
         plt.ylabel('Time (s)')
         plt.legend()
         plt.grid(True)
-        plt.savefig(f'{alg_name}_plot.png')
+        plt.savefig(f'{list_name}_plot.png')
         
     plt.show()
     
